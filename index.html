@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>grids cycles networks</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="mctavish ::: grids cycles networks" />
+	<meta name="keywords" content="mctavish net.art grids grid forms form structure scores network cycle generative algorithmic code electronic literature" />
+	<meta name="author" content="kathy mctavish">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebPage",
+			"name": "grids cycles networks ::: home",
+			"breadcrumb": "grids cycles networks",
+          		"url": "http://www.gridcycles.work/index.html",
+			"description": "notes on form",
+			"datePublished": "2021-03-01",
+          		"image": "https://www.mctavish.io/apple-touch-icon.png",
+			"author": "https://mctavish.io",
+			"license": "http://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.en_US"
+		}
+	</script>
+	<link rel="stylesheet" href="/css/gridcycles.css"/>
+	<style>
+		.grid_absolute_4x4_rect > div.griditem:nth-child(3n) {
+			background-color: var(--warmblack);
+		}
+		.grid_absolute_4x4_rect > div.griditem:nth-child(3n+1) {
+			background-color: var(--warmwhite);
+		}
+		.grid_absolute_4x4_rect  > div.griditem:nth-child(3n+2) {
+			background-color: var(--blue);
+		}
+		.grid_absolute_4x4_circle > div.griditem:nth-child(3n+1) {
+			background-color: var(--warmblack);
+		}
+		.grid_absolute_4x4_circle > div.griditem:nth-child(3n+2) {
+			background-color: var(--warmwhite);
+		}
+		.grid_absolute_4x4_circle  > div.griditem:nth-child(3n) {
+			background-color: var(--blue);
+		}
+		.grid_absolute_4x4_square > div.griditem:nth-child(3n+2) {
+			background-color: var(--warmblack);
+		}
+		.grid_absolute_4x4_square > div.griditem:nth-child(3n) {
+			background-color: var(--warmwhite);
+		}
+		.grid_absolute_4x4_square  > div.griditem:nth-child(3n+1) {
+			background-color: var(--blue);
+		}
+		
+		.tcontainer {
+			width:100%;
+			overflow: hidden;
+		}
+		.tickerwrap {
+			width:100%;
+			padding-left:100%;
+			/*background-color: var(--warmgray);*/
+		}
+		@keyframes tickerleft {
+			0% { transform: translate3d(0,0,0); }
+			100% { transform: translate3d(-200%,0,0); }
+		}
+		@keyframes tickerright {
+			0% { transform: translate3d(0,0,0); }
+			100% { transform: translate3d(200%,0,0); }
+		}
+		.tickermove {
+			display: inline-block;
+			white-space: nowrap;
+			padding-right:100%;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			animation-name: tickerleft;
+			animation-duration: 10s;
+			animation-direction: alternate;
+			color: var(--warmwhite);
+		}
+		.tickermove:hover {
+			animation-play-state: paused;
+		}
+		.tickermove:nth-child(4n+1) {
+			animation-delay: 4s;
+			color: var(--blue);
+		}
+		.tickermove:nth-child(4n+2) {
+			animation-delay: 8s;
+			color: var(--warmwhite);
+		}
+		.tickermove:nth-child(4n+3) {
+			animation-delay: 12s;
+			color: var(--blue);
+		}
+		.tickeritem {
+			display: inline-block;
+			font-size: 40vh;
+			padding: 0 2rem;
+		}
+		body {
+			transition: background-color 800ms linear;
+		}
+	</style>
+	
+</head>
+<body id="top" >
+
+<div id="divframe" aria-hidden="true">
+<div id="canvas0" class="grid_absolute_4x4_rect" aria-hidden="true">
+	<div id="l0r0c0" class="griditem"></div><div id="l0r0c1" class="griditem"></div><div id="l0r0c2" class="griditem"></div><div id="l0r0c3" class="griditem"></div>
+	<div id="l0r1c0" class="griditem"></div><div id="l0r1c1" class="griditem"></div><div id="l0r1c2" class="griditem"></div><div id="l0r1c3" class="griditem"></div>
+	<div id="l0r2c0" class="griditem"></div><div id="l0r2c1" class="griditem"></div><div id="l0r2c2" class="griditem"></div><div id="l0r2c3" class="griditem"></div>
+	<div id="l0r3c0" class="griditem"></div><div id="l0r3c1" class="griditem"></div><div id="l0r3c2" class="griditem"></div><div id="l0r3c3" class="griditem"></div>
+</div>
+<div id="canvas1" class="grid_absolute_4x4_square" aria-hidden="true">
+	<div id="l1r0c0" class="griditem"></div><div id="l1r0c1" class="griditem"></div><div id="l1r0c2" class="griditem"></div><div id="l1r0c3" class="griditem"></div>
+	<div id="l1r1c0" class="griditem"></div><div id="l1r1c1" class="griditem"></div><div id="l1r1c2" class="griditem"></div><div id="l1r1c3" class="griditem"></div>
+	<div id="l1r2c0" class="griditem"></div><div id="l1r2c1" class="griditem"></div><div id="l1r2c2" class="griditem"></div><div id="l1r2c3" class="griditem"></div>
+	<div id="l1r3c0" class="griditem"></div><div id="l1r3c1" class="griditem"></div><div id="l1r3c2" class="griditem"></div><div id="l1r3c3" class="griditem"></div>
+</div>
+<div id="canvas2" class="grid_absolute_4x4_circle" aria-hidden="true">
+	<div id="l1r0c0" class="griditem"></div><div id="l1r0c1" class="griditem"></div><div id="l1r0c2" class="griditem"></div><div id="l1r0c3" class="griditem"></div>
+	<div id="l1r1c0" class="griditem"></div><div id="l1r1c1" class="griditem"></div><div id="l1r1c2" class="griditem"></div><div id="l1r1c3" class="griditem"></div>
+	<div id="l1r2c0" class="griditem"></div><div id="l1r2c1" class="griditem"></div><div id="l1r2c2" class="griditem"></div><div id="l1r2c3" class="griditem"></div>
+	<div id="l1r3c0" class="griditem"></div><div id="l1r3c1" class="griditem"></div><div id="l1r3c2" class="griditem"></div><div id="l1r3c3" class="griditem"></div>
+</div>
+</div> <!-- end div frame -->
+
+<div id="subtextframe" aria-hidden="true">
+	<div class="tcontainer">
+		<div class="tickermove">
+			<div class="tickerwrap">
+				<div class="tickeritem">_.._._+ . < +=_.._._+ . < +=_.._._+ . < +=: :  . < > '",". . . . . .& | { . . ::: x</div>
+			</div>
+		</div>
+		<div class="tickermove">
+			<div class="tickerwrap">
+				<div class="tickeritem">_.._._+ . < +=_.._._+ . < +=_.._._+ . < +=: :  . < > '",". . . . . .& | { . . ::: x</div>
+			</div>
+		</div>
+		<div class="tickermove">
+			<div class="tickerwrap">
+				<div class="tickeritem">_.._._+ . < +=_.._._+ . < +=_.._._+ . < +=: :  . < > '",". . . . . .& | { . . ::: x</div>
+			</div>
+		</div>
+		<div class="tickermove">
+			<div class="tickerwrap">
+				<div class="tickeritem">_.._._+ . < +=_.._._+ . < +=_.._._+ . < +=: :  . < > '",". . . . . .& | { . . ::: x</div>
+			</div>
+		</div>
+	</div>
+</div> <!-- end of subtext frame -->
+
+<div id="contentframe" aria-hidden="true">
+
+<main id="main">
+<header>
+	<h1>grids cycles & networks</h1>
+	<h2>thoughts on form</h2>
+</header>
+<nav>
+	<ul class="stanza">
+		<!-- <li><a href="#maincontent" id="skiptomaincontent">skip to main content</a></li> -->
+		<li><a href="https://mctavish.io/index.html" id="homelink">go to mctavish portfolio</a></li>
+		<li><a href="codescores.html">code & scores</a></li>
+		<li><a href="#dashboard" id="gotodashboard">access dashboard</a></li>
+	</ul>
+</nav>
+
+<div class="screenreader-text">
+	<p>Your feedback is always welcome.</p>
+</div>
+
+<article id="maincontent">
+	<header>
+		<h1>. . .</h1>
+	</header>
+	<p>soon ... very soon  ... working away at content . . .</p>
+	<ul class="stanza">
+		<li>abstraction</li>
+		<li>arachne</li>
+		<li>networks</li>
+		<li>multithreded simultaneity</li>
+		<li>loose coupling</li>
+		<li>improv</li>
+		<li>deep listening </li>
+		<li>abstraction</li>
+		<li>keywords / tags</li>
+		<li>idempotence</li>
+		<li>unix manifesto</li>
+		<li>simple</li>
+		<li>circle in circle cycles</li>
+		<li>grid discrete vs fretlessness</li>
+		<li>landscapes axes layers</li>
+		<li>intersections frictions</li>
+		<li>the physics of desire motion change </li>
+		<li>alchemy transformation translation maps</li>
+		<li>dream of a common exchange language</li>
+	</ul>
+</article>
+
+
+<fieldset id="dashboard">
+<legend>access dashboard</legend>
+<!-- <label for="sound"><input id="sound" type="checkbox"> play sound</label> -->
+<label for="highcontrast"><input id="highcontrast" type="checkbox"> high contrast</label>
+<label for="largetext"><input id="largetext" type="checkbox"> large text</label>
+<label for="darklight"><input id="darklight" type="checkbox"> dark / light</label>
+</fieldset>
+
+</main>
+<footer>
+<p id="animationcontrols" style="min-width:100%">
+<label for="animationonly"><input id="animationonly" type="checkbox"> animation only (hide text)</label>
+</p>
+<p><a href="#top" class="corelink">^ back to top</a></p>
+</footer>
+
+</div> <!-- end contentframe -->
+
+</body>
+<!--<script src="/code/gridcycles.js"></script>-->
+<script>
+//let z = getz();
+let z = {
+	tools: {
+		randominteger: (min, max) => {
+			return Math.floor( min + Math.random()*(max-min));
+		}
+	}
+};
+//draw
+let err = ( () => {
+
+	let width = window.innerWidth, height = window.innerHeight;
+	let max = Math.max(width, height), min = Math.min(width, height);
+	let dx = width/4, dy = height/4;
+
+	window.addEventListener("resize", e => {
+		width = window.innerWidth; height = window.innerHeight;
+		max = Math.max(width, height), min = Math.min(width, height);
+		console.log("window.innerWidth = " + window.innerWidth);
+
+		let dx = width/4, dy = height/4;
+		
+	});
+
+	let count = 0;
+	
+	document.querySelector("#canvas0").querySelectorAll(".griditem").forEach( (el,j) => {
+		window.setInterval(() => { 
+			++count; 
+			let scaleX = " scaleX("+((count+1)%20)/8+")";
+			let scaleY = " scaleY("+(21-count%20)/8+")";
+			el.style.transform = scaleX + scaleY;
+		}, j*100+3000);
+	});
+
+	document.querySelector("#canvas1").querySelectorAll(".griditem").forEach( (el,j) => {
+		window.setInterval(() => { 
+			++count; 
+			let scaleX = " scaleX("+((count+1)%20)/10+")";
+			let scaleY = " scaleY("+(21-count%20)/10+")";
+			el.style.transform = scaleX + scaleY;
+		}, j*100+1000);
+	});
+	document.querySelector("#canvas2").querySelectorAll(".griditem").forEach( (el,j) => {
+		window.setInterval(() => { 
+			++count; 
+			let scale = " scale("+( (count+1)%20)/20+")";
+			el.style.transform =  scale;   
+		}, j*100+2000);
+	});
+
+ 	( () => {
+		const body = document.querySelector("body");
+		let colors = [["warmblack",4], ["warmwhite",4], ["blue",2], ["warmgray",1]].reduce( (acc, color, j) => {
+			Array.prototype.push.apply(acc,[...Array(color[1]).keys()].reduce( (acc2,k) => { acc2.push(color[0]); return acc2 },[]) );
+			return acc;
+		}, []);
+		window.setInterval(() => { 
+			let color = colors[z.tools.randominteger(0,colors.length)];
+			z.tools.logmsg("color = " + color);
+			body.style.backgroundColor = "var(--"+color+")";
+		}, 8000);
+	})();
+
+
+})();
+
+</script>
+</html>
